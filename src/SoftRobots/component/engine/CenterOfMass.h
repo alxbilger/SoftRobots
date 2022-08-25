@@ -65,18 +65,6 @@ public:
     typedef typename core::behavior::MechanicalState<DataTypes> MechanicalState;
     typedef typename core::behavior::Mass<DataTypes>            Mass;
 
-public:
-
-    std::string getTemplateName() const override
-    {
-        return templateName(this);
-    }
-
-    static std::string templateName(const CenterOfMass<DataTypes>* = nullptr)
-    {
-        return DataTypes::Name();
-    }
-
     CenterOfMass();
     ~CenterOfMass() override;
 

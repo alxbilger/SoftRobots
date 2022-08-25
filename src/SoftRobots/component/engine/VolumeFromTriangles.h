@@ -71,18 +71,6 @@ public:
     typedef core::topology::BaseMeshTopology::SeqTriangles      VecTriangles;
     typedef core::topology::BaseMeshTopology::SeqQuads          VecQuads;
 
-public:
-
-    std::string getTemplateName() const override
-    {
-        return templateName(this);
-    }
-
-    static std::string templateName(const VolumeFromTriangles<DataTypes>* = nullptr)
-    {
-        return DataTypes::Name();
-    }
-
     VolumeFromTriangles();
     ~VolumeFromTriangles() override;
 

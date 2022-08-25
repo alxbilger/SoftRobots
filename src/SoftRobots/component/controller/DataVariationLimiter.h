@@ -58,11 +58,9 @@ public:
     typedef T                        Value;
     typedef typename T::value_type   ValueType;
 
-public:
-
-    std::string getTemplateName() const override
+    static std::string GetCustomTemplateName()
     {
-        return templateName(this);
+        return templateName();
     }
 
     static std::string templateName(const DataVariationLimiter<T>* = nullptr)

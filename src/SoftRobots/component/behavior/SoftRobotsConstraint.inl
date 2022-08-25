@@ -149,20 +149,6 @@ void SoftRobotsConstraint<DataTypes>::storeLambda(const ConstraintParams* cParam
     j.multTransposeBaseVector(res, lambda ); // lambda is a vector of scalar value so block size is one.
 }
 
-
-template<class DataTypes>
-std::string SoftRobotsConstraint<DataTypes>::getTemplateName() const
-{
-    return templateName(this);
-}
-
-template<class DataTypes>
-std::string SoftRobotsConstraint<DataTypes>::templateName(const SoftRobotsConstraint<DataTypes>*)
-{
-    return DataTypes::Name();
-}
-
-
 } // namespace behavior
 
 } // namespace core
